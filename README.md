@@ -1,6 +1,7 @@
 # hello_world
 
-## The example
+This is simply a mess of my notes and observations while doing this.  Conceptually trivial, having never touched Jenkins it has been a bit of an adventure.
+
 
 
 # install & setup of jenkins :
@@ -12,8 +13,8 @@ https://stackoverflow.com/questions/41055669/unable-to-connect-to-jenkins-server
 
 
 2 ways to do this ( will try to do both )
-1) install on host
-2) docker container to avoid the setup headache (I'm a bit of a masochist)
+1) install on host (I'm a bit of a masochist)
+2) docker container to avoid the setup headache 
 
 
 
@@ -39,3 +40,5 @@ https://tech.ticketfly.com/our-journey-to-continuous-delivery-chapter-4-run-jenk
 * [Add jenkins automation to be ble to deploy to multiple ami's for parallel building](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-jenkins.html)
 * Add in registry.  There needs to be an internal registry beyond whats going on local to the build server.
 * add additional tests
+* https://jenkins.io/doc/pipeline/examples/#push-git-repo
+* Set up jenkins/github credentials to auto post hooks (for this exercise manually added web hook)
