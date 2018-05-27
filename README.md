@@ -13,7 +13,8 @@ https://stackoverflow.com/questions/41055669/unable-to-connect-to-jenkins-server
 
 2 ways to do this ( will try to do both )
 1) install on host
-2) just pull a docker container to avoid the setup headache
+2) docker container to avoid the setup headache (I'm a bit of a masochist)
+
 
 
 
@@ -23,3 +24,18 @@ would be nice to simply have the template and spin up a cluster, that said, not 
 
 
 https://tech.ticketfly.com/our-journey-to-continuous-delivery-chapter-4-run-jenkins-infrastructure-on-aws-container-service-ef37e0304b95
+
+
+# Considerations for this project
+
+* launch web service not with debug webserver but with gunicorn, uwsgi, tornado or a production grade web server
+* add NGINX for load balancing and reverse proxy (possibly service static filees)
+* [Change assignment slightly to deploy to ECS instead of EC2?  (is it meant to be more difficult to have a vm like environment to build in?)](https://aws.amazon.com/blogs/devops/set-up-a-build-pipeline-with-jenkins-and-amazon-ecs/)
+
+
+
+# TODO:
+
+* [Add jenkins automation to be ble to deploy to multiple ami's for parallel building](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-jenkins.html)
+* Add in registry.  There needs to be an internal registry beyond whats going on local to the build server.
+* add additional tests
