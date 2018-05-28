@@ -15,5 +15,10 @@ pipeline {
         sh 'docker run -t localhost:5000/hello_world pytest'
       }
     }
+    stage("Deploy") {
+      steps {
+        sh 'docker run -t -d -p 5050:5000 localhost:5000/hello_world'
+      }
+    }
   }
 }
