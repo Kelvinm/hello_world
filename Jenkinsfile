@@ -19,9 +19,10 @@ pipeline {
     }
     stage("Test") {
       //would normally tag this as something other than latest, like candidate etc.
-      agent { docker 'localhost:5000/hello_world:latest' } 
+      agent { docker 'localhost:5000/hello_world:latest' } // for some reason this context isn't getting passed along properly
       steps {
-        sh 'pytest'
+        //sh 'pytest'  
+        sh 'docker run -it localhost:5000 pytest'
       }
     }
   }
