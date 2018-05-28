@@ -24,7 +24,7 @@ pipeline {
       agent { docker 'localhost:5000/hello_world:latest' } // for some reason this context isn't getting passed along properly
       steps {
         //sh 'pytest'  
-        sh 'docker run -it localhost:5000 pytest'
+        sh 'docker run -t localhost:5000 pytest'
       }
     }
   }
