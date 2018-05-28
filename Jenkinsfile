@@ -11,8 +11,8 @@ pipeline {
   // On doing more reseaerch, probably would be better to build it locally as part of the agent and test it further on?  I need to finish.
   agent none 
   stages {
-    agent { dockerfile true }
     stage ('Build') {
+      agent { dockerfile true }
       steps {
         sh 'docker build -t localhost:5000/hello_world:latest . '
       }
