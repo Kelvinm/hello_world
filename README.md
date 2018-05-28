@@ -27,4 +27,5 @@ https://tech.ticketfly.com/our-journey-to-continuous-delivery-chapter-4-run-jenk
 * [Add jenkins automation to be ble to deploy to multiple ami's for parallel building](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-jenkins.html)
 * add additional tests
 * https://github.com/jenkinsci/google-container-registry-auth-plugin/pull/2/files ( modify to have multiple hosts) 
-* build to different environment based tagging
+* build to different branch/environment based tagging
+    * currently contains race condition if multiple new branches are committed/building at the same time due to naming
