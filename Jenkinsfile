@@ -1,13 +1,5 @@
 pipeline {
-  /*agent { dockerfile true }
-  stages {
-    stage("Test") {
-      steps {
-        sh 'pytest'
-      }
-    }
-  }*/
-  
+ 
   // On doing more reseaerch, probably would be better to build it locally as part of the agent and test it further on?  I need to finish.
   agent any
   stages {
@@ -20,7 +12,6 @@ pipeline {
     stage("Test") {
       //would normally tag this as something other than latest, like candidate etc.
       steps {
-        //sh 'pytest'  
         sh 'docker run -t localhost:5000/hello_world pytest'
       }
     }
