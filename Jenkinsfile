@@ -9,7 +9,7 @@ pipeline {
   }*/
   
   // On doing more reseaerch, probably would be better to build it locally as part of the agent and test it further on?  I need to finish.
-  agent { docker } 
+  agent any
   stages {
     stage ('Build') {
       agent { dockerfile true }
