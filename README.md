@@ -34,3 +34,4 @@ https://tech.ticketfly.com/our-journey-to-continuous-delivery-chapter-4-run-jenk
 # Jenkins Multi Branch Pipelines
 
 Getting jenkins to properly build multiple branches based on hooks is a mess.  It required translating the clear text password to a token and then restarting the whole server, which took about 2 hours of digging to figure out.  ( a lot of people having that issue hehehe ) 
+
