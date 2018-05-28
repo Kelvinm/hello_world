@@ -18,7 +18,7 @@ pipeline {
     }
     stage("Test") {
       //would normally tag this as something other than latest, like candidate etc.
-      agent { docker 'localhost:5000/hello_world:latest"} 
+      agent { docker "localhost:5000/hello_world:latest"} 
       steps {
         sh 'pytest'
       }
