@@ -9,7 +9,7 @@ pipeline {
   }*/
   
   // On doing more reseaerch, probably would be better to build it locally as part of the agent and test it further on?  I need to finish.
-  agent { none }
+  agent none 
   stages {
     stage ('Build') {
       steps {
