@@ -8,7 +8,6 @@ pipeline {
     }
   }*/
   
-  agent { label 'docker' }
   // On doing more reseaerch, probably would be better to build it locally as part of the agent and test it further on?  I need to finish.
   stages {
     stage ('Build') {
