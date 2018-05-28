@@ -17,7 +17,8 @@ pipeline {
     }
     stage("Deploy") {
       steps {
-        sh 'docker run -t -d -p 5050:5000 localhost:5000/hello_world'
+        sh 'docker rm -f teladocing && echo "container teladocing removed" || echo "container teladocing does not exist"'
+        sh 'docker run -t -d --name teladocing -p 5050:5000 localhost:5000/hello_world'
       }
     }
   }
