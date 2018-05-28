@@ -15,6 +15,7 @@ pipeline {
       agent { dockerfile true }
       steps {
         sh 'docker build -t localhost:5000/hello_world:latest . '
+        sh 'docker push localhost:5000/hello_world:latest'
       }
     }
     stage("Test") {
